@@ -38,11 +38,11 @@ const WhitelistForm: React.FC = () => {
   };
 
   return (
-    <section id="whitelist" className="py-20 bg-white">
+    <section id="whitelist" className="py-20 bg-brand-bg-light">
       <div className="container mx-auto px-6">
-        <div className="bg-brand-charcoal-dark rounded-2xl p-8 md:p-16 text-center shadow-2xl">
+        <div className="bg-brand-bg-dark rounded-2xl p-8 md:p-16 text-center shadow-2xl border border-white/10">
           <h2 className="text-4xl font-bold text-white">{whitelist.title}</h2>
-          <p className="text-lg text-brand-cyan-200 mt-4 max-w-2xl mx-auto"
+          <p className="text-lg text-brand-text-dark mt-4 max-w-2xl mx-auto"
              dangerouslySetInnerHTML={{ __html: whitelist.description }}
           />
           <form onSubmit={handleSubmit} className="mt-8 max-w-lg mx-auto">
@@ -52,12 +52,12 @@ const WhitelistForm: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={whitelist.form.placeholder}
-                className="w-full px-6 py-4 text-lg text-brand-charcoal-dark rounded-full border-2 border-transparent focus:outline-none focus:ring-4 focus:ring-brand-cyan-400 transition-all duration-300"
+                className="w-full px-6 py-4 text-lg bg-brand-bg-light text-brand-text-light rounded-full border-2 border-transparent focus:outline-none focus:ring-4 focus:ring-brand-primary transition-all duration-300"
                 disabled={status === 'loading'}
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto bg-brand-cyan-600 text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-brand-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                className="w-full sm:w-auto bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
                 disabled={status === 'loading'}
               >
                 {status === 'loading' ? whitelist.form.loading : whitelist.form.button}

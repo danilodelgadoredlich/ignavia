@@ -1,10 +1,8 @@
-
 export const translations = {
   en: {
     header: {
       features: 'Features',
       demo: 'Demo',
-      whitelist: 'Whitelist',
       contact: 'Contact',
       language: 'Español',
     },
@@ -12,7 +10,6 @@ export const translations = {
       title: 'Reclaim Your Inbox.',
       subtitle: 'AI-Powered Summaries',
       description: 'Stop drowning in emails. Ignavia uses advanced AI to summarize your threads, giving you the gist in seconds so you can focus on what truly matters.',
-      cta: 'Sign Up for Beta',
     },
     features: {
       title: 'The Future of Email is Here',
@@ -57,15 +54,15 @@ export const translations = {
       },
     },
     whitelist: {
-      title: 'Join the Beta Whitelist',
-      description: 'Be the first to experience Ignavia. Sign up to get <strong>5 free trial summaries</strong> and help shape the future of email.',
+      title: 'Sign Up Now',
+      description: 'Sign up for access to Ignavia and experience the future of email. As a bonus, you\'ll get <b>5 free message summaries</b> instantly!',
       form: {
         placeholder: 'Enter your email address',
-        button: 'Get Early Access',
-        loading: 'Joining...',
-        success: 'You\'re on the list! We\'ll be in touch soon.',
         error: 'Please enter a valid email address.',
         errorApi: 'Something went wrong. Please try again.',
+        success: 'Success! Check your email for access instructions.',
+        loading: 'Signing Up...',
+        button: 'Get Access Now',
       },
     },
     footer: {
@@ -76,7 +73,6 @@ export const translations = {
     header: {
       features: 'Características',
       demo: 'Demostración',
-      whitelist: 'Lista de Espera',
       contact: 'Contacto',
       language: 'English',
     },
@@ -84,7 +80,6 @@ export const translations = {
       title: 'Recupera tu Bandeja de Entrada.',
       subtitle: 'Resúmenes con IA',
       description: 'Deja de ahogarte en correos. Ignavia usa IA avanzada para resumir tus hilos, dándote lo esencial en segundos para que puedas enfocarte en lo que realmente importa.',
-      cta: 'Regístrate a la Beta',
     },
     features: {
       title: 'El Futuro del Email está Aquí',
@@ -129,15 +124,15 @@ export const translations = {
       },
     },
     whitelist: {
-      title: 'Únete a la Lista de Espera Beta',
-      description: 'Sé el primero en probar Ignavia. Regístrate para obtener <strong>5 resúmenes de prueba gratis</strong> y ayuda a forjar el futuro del email.',
+      title: 'Regístrate Ahora',
+      description: 'Regístrate para obtener acceso a Ignavia y experimenta el futuro del correo electrónico. ¡Como bono, obtendrás <b>5 resúmenes de mensajes gratis</b> ahora!',
       form: {
-        placeholder: 'Ingresa tu dirección de email',
-        button: 'Obtener Acceso Anticipado',
-        loading: 'Uniéndote...',
-        success: '¡Estás en la lista! Nos pondremos en contacto pronto.',
-        error: 'Por favor, ingresa un email válido.',
+        placeholder: 'Ingresa tu dirección de correo electrónico',
+        error: 'Por favor, ingresa una dirección de correo electrónico válida.',
         errorApi: 'Algo salió mal. Por favor, inténtalo de nuevo.',
+        success: '¡Éxito! Revisa tu correo para obtener instrucciones de acceso.',
+        loading: 'Registrando...',
+        button: 'Obtener Acceso Ahora',
       },
     },
     footer: {

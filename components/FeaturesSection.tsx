@@ -11,12 +11,12 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-brand-cyan-100 text-brand-cyan-600 mb-6">
+    <div className="bg-brand-bg-dark p-8 rounded-xl shadow-lg border border-white/10 hover:border-brand-primary hover:shadow-brand-primary/20 transition-all duration-300 transform hover:-translate-y-2">
+      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-brand-primary/10 text-brand-primary mb-6">
         {icon}
       </div>
-      <h3 className="text-2xl font-bold text-brand-charcoal-dark mb-3">{title}</h3>
-      <p className="text-brand-charcoal-light leading-relaxed">{description}</p>
+      <h3 className="text-2xl font-bold text-brand-text-light mb-3">{title}</h3>
+      <p className="text-brand-text-dark leading-relaxed">{description}</p>
     </div>
   );
 };
@@ -26,11 +26,11 @@ const FeaturesSection: React.FC = () => {
   const { features } = translations;
 
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-20 bg-brand-bg-light">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-brand-charcoal-dark">{features.title}</h2>
-          <p className="text-lg text-brand-charcoal-light mt-4 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-brand-text-light">{features.title}</h2>
+          <p className="text-lg text-brand-text-dark mt-4 max-w-3xl mx-auto">
             {features.description}
           </p>
         </div>
