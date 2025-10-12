@@ -105,7 +105,7 @@ export const translations = {
     },
     mockup: {
       title: 'Mira a Ignavia en Acción',
-      description: 'Una interfaz limpia e intuitiva que pone los resúmenes en primer plano.',
+      description: 'Nuestra interfaz convierte cadenas de emails y newsletters en resúmenes clave, eliminando lo irrelevante.',
       sidebar: {
         item1: { title: 'Inicio Proyecto Q3', preview: 'Hola equipo, empecemos a trabajar en...' },
         item2: { title: 'Mantenimiento de Servidor', preview: 'Solo un aviso sobre el próximo...' },
