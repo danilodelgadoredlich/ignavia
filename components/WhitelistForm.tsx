@@ -32,13 +32,16 @@ const WhitelistForm: React.FC = () => {
         body: JSON.stringify({ email: email }),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await response.json();
+
+      if (response.ok && data.value === '0') {
+        setStatus('success');
+        setMessage(data.Result);
+        setEmail('');
+      } else {
+        setStatus('error');
+        setMessage(data.Result || whitelist.form.errorApi);
       }
-      
-      setStatus('success');
-      setMessage(whitelist.form.success);
-      setEmail('');
 
     } catch (error) {
       console.error('Submission error:', error);
@@ -76,9 +79,9 @@ const WhitelistForm: React.FC = () => {
               </button>
             </div>
              {message && (
-                <p className={`mt-4 text-sm ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}>
-                    {message}
-                </p>
+                <div className={`mt-4 text-sm ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}
+                    dangerouslySetInnerHTML={{ __html: message }} 
+                />
             )}
           </form>
         </div>
