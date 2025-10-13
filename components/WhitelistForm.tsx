@@ -39,20 +39,16 @@ const WhitelistForm: React.FC = () => {
 
       const data: ApiResponse = await response.json();
 
-      if (!response.ok) {
-        // Use the API's message if available, otherwise fall back to a generic one
-        setMessage(data.Result || `<p>${whitelist.form.errorApi}</p>`);
-        setStatus('error');
-        return;
-      }
-      
-      if (data.value === "0") {
+      // Even with a 4xx/5xx error, the API might send a JSON body.
+      // We prioritize the business logic value ("0") over the HTTP status.
+      if (data && data.value === "0") {
         setStatus('success');
         setMessage(data.Result);
         setEmail('');
       } else {
+        // Handle all other cases as errors, using the API's message.
         setStatus('error');
-        setMessage(data.Result);
+        setMessage(data.Result || `<p>${whitelist.form.errorApi}</p>`);
       }
 
     } catch (error) {
