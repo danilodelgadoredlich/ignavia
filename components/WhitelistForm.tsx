@@ -1,4 +1,3 @@
-
 import React, { useState, FormEvent } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -14,7 +13,7 @@ const WhitelistForm: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!email) {
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
         setStatus('error');
         setMessage(whitelist.form.error);
         return;
@@ -23,17 +22,28 @@ const WhitelistForm: React.FC = () => {
     setStatus('loading');
     setMessage('');
 
-    // Simulate an API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('https://integracion.ignavia.cl/webhook-test/suscripcion', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Token isuw-uojf-xpon-cliv',
+        },
+        body: JSON.stringify({ email: email }),
+      });
 
-    // Simulate success/error
-    if (email.includes('error')) {
-        setStatus('error');
-        setMessage(whitelist.form.errorApi);
-    } else {
-        setStatus('success');
-        setMessage(whitelist.form.success);
-        setEmail('');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      setStatus('success');
+      setMessage(whitelist.form.success);
+      setEmail('');
+
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+      setMessage(whitelist.form.errorApi);
     }
   };
 
@@ -54,6 +64,8 @@ const WhitelistForm: React.FC = () => {
                 placeholder={whitelist.form.placeholder}
                 className="w-full px-6 py-4 text-lg bg-brand-bg-light text-brand-text-light rounded-full border-2 border-transparent focus:outline-none focus:ring-4 focus:ring-brand-primary transition-all duration-300"
                 disabled={status === 'loading'}
+                aria-label={whitelist.form.placeholder}
+                required
               />
               <button
                 type="submit"

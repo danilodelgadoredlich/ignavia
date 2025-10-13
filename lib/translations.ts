@@ -36,21 +36,49 @@ export const translations = {
     mockup: {
       title: 'See Ignavia in Action',
       description: 'A clean, intuitive interface that puts summaries front and center.',
-      sidebar: {
-        item1: { title: 'Q3 Project Kick-off', preview: 'Hey team, let\'s get the ball rolling on...' },
-        item2: { title: 'Server Maintenance', preview: 'Just a heads up about the upcoming...' },
-        item3: { title: 'Marketing Budget', preview: 'Can you please review the attached...' },
-      },
-      main: {
-        title: 'Q3 Project Kick-off',
-        summaryTitle: 'AI Summary',
-        summaryPoints: {
-          goal: '<b>Goal:</b> Launch the new dashboard by end of Q3.',
-          people: '<b>Key People:</b> Alice (Design), Bob (Eng), Carol (Marketing).',
-          action: '<b>Action Item (Bob):</b> Finalize tech stack by this Friday.',
-          decision: '<b>Decision:</b> We will proceed with the React framework.',
+      items: {
+        item1: {
+          sidebar: { title: 'Q3 Project Kick-off', preview: 'Hey team, let\'s get the ball rolling on...' },
+          main: {
+            title: 'Q3 Project Kick-off',
+            summaryTitle: 'AI Summary',
+            summaryPoints: {
+              goal: '<b>Goal:</b> Launch the new dashboard by end of Q3.',
+              people: '<b>Key People:</b> Alice (Design), Bob (Eng), Carol (Marketing).',
+              action: '<b>Action Item (Bob):</b> Finalize tech stack by this Friday.',
+              decision: '<b>Decision:</b> We will proceed with the React framework.',
+            },
+            originalThread: 'Original Thread (12 messages)',
+          },
         },
-        originalThread: 'Original Thread (12 messages)',
+        item2: {
+          sidebar: { title: 'Server Maintenance', preview: 'Just a heads up about the upcoming...' },
+          main: {
+            title: 'Server Maintenance',
+            summaryTitle: 'AI Summary',
+            summaryPoints: {
+              info: '<b>Info:</b> Planned server maintenance this weekend.',
+              impact: '<b>Impact:</b> Intermittent downtime expected for internal tools.',
+              action: '<b>Action:</b> No action required from most users. Eng team to monitor.',
+              time: '<b>Time:</b> Saturday, 10 PM to Sunday, 2 AM PST.',
+            },
+            originalThread: 'Original Thread (3 messages)',
+          },
+        },
+        item3: {
+          sidebar: { title: 'Marketing Budget', preview: 'Can you please review the attached...' },
+          main: {
+            title: 'Marketing Budget',
+            summaryTitle: 'AI Summary',
+            summaryPoints: {
+              request: '<b>Request:</b> Review the attached Q4 marketing budget proposal.',
+              from: '<b>From:</b> Carol (Marketing).',
+              action: '<b>Action Item:</b> Provide feedback on the proposed ad spend allocation by EOD Wednesday.',
+              attachment: '<b>Attachment:</b> <code class="bg-brand-bg-dark text-brand-accent px-2 py-1 rounded-md text-sm">Q4_Budget_Proposal.pdf</code> analyzed.',
+            },
+            originalThread: 'Original Thread (5 messages)',
+          },
+        },
       },
     },
     whitelist: {
@@ -106,26 +134,54 @@ export const translations = {
     mockup: {
       title: 'Mira a Ignavia en Acción',
       description: 'Nuestra interfaz convierte cadenas de emails y newsletters en resúmenes clave, eliminando lo irrelevante.',
-      sidebar: {
-        item1: { title: 'Inicio Proyecto Q3', preview: 'Hola equipo, empecemos a trabajar en...' },
-        item2: { title: 'Mantenimiento de Servidor', preview: 'Solo un aviso sobre el próximo...' },
-        item3: { title: 'Presupuesto de Marketing', preview: 'Por favor, revisa el adjunto...' },
-      },
-      main: {
-        title: 'Inicio Proyecto Q3',
-        summaryTitle: 'Resumen IA',
-        summaryPoints: {
-          goal: '<b>Objetivo:</b> Lanzar el nuevo dashboard para el fin del Q3.',
-          people: '<b>Personas Clave:</b> Alice (Diseño), Bob (Ing.), Carol (Marketing).',
-          action: '<b>Acción (Bob):</b> Finalizar stack tecnológico para este viernes.',
-          decision: '<b>Decisión:</b> Procederemos con el framework React.',
+      items: {
+        item1: {
+          sidebar: { title: 'Inicio Proyecto Q3', preview: 'Hola equipo, empecemos a trabajar en...' },
+          main: {
+            title: 'Inicio Proyecto Q3',
+            summaryTitle: 'Resumen IA',
+            summaryPoints: {
+              goal: '<b>Objetivo:</b> Lanzar el nuevo dashboard para el fin del Q3.',
+              people: '<b>Personas Clave:</b> Alice (Diseño), Bob (Ing.), Carol (Marketing).',
+              action: '<b>Acción (Bob):</b> Finalizar stack tecnológico para este viernes.',
+              decision: '<b>Decisión:</b> Procederemos con el framework React.',
+            },
+            originalThread: 'Hilo Original (12 mensajes)',
+          },
         },
-        originalThread: 'Hilo Original (12 mensajes)',
+        item2: {
+          sidebar: { title: 'Mantenimiento de Servidor', preview: 'Solo un aviso sobre el próximo...' },
+          main: {
+            title: 'Mantenimiento de Servidor',
+            summaryTitle: 'Resumen IA',
+            summaryPoints: {
+              info: '<b>Info:</b> Mantenimiento de servidor planeado para este fin de semana.',
+              impact: '<b>Impacto:</b> Se espera inactividad intermitente en herramientas internas.',
+              action: '<b>Acción:</b> No se requiere acción de la mayoría de usuarios. Equipo de Ing. monitoreará.',
+              time: '<b>Hora:</b> Sábado, 10 PM a Domingo, 2 AM PST.',
+            },
+            originalThread: 'Hilo Original (3 mensajes)',
+          },
+        },
+        item3: {
+          sidebar: { title: 'Presupuesto de Marketing', preview: 'Por favor, revisa el adjunto...' },
+          main: {
+            title: 'Presupuesto de Marketing',
+            summaryTitle: 'Resumen IA',
+            summaryPoints: {
+              request: '<b>Solicitud:</b> Revisar la propuesta de presupuesto de marketing para el Q4 adjunta.',
+              from: '<b>De:</b> Carol (Marketing).',
+              action: '<b>Acción:</b> Proveer feedback sobre la asignación de gasto publicitario para el miércoles.',
+              attachment: '<b>Adjunto:</b> <code class="bg-brand-bg-dark text-brand-accent px-2 py-1 rounded-md text-sm">Propuesta_Presupuesto_Q4.pdf</code> analizado.',
+            },
+            originalThread: 'Hilo Original (5 mensajes)',
+          },
+        },
       },
     },
     whitelist: {
       title: 'Regístrate Ahora',
-      description: 'Regístrate para obtener acceso a Ignavia y experimenta el futuro del correo electrónico. ¡Como bono, obtendrás <b>5 resúmenes de mensajes gratis</b> ahora!',
+      description: 'Regístrate para obtener acceso a Ignavia y experimenta el futuro del correo electrónico. ¡y obtén <b>5 resúmenes de mensajes gratis</b> ahora, incluidos resúmenes con adjuntos!',
       form: {
         placeholder: 'Ingresa tu dirección de correo electrónico',
         error: 'Por favor, ingresa una dirección de correo electrónico válida.',
