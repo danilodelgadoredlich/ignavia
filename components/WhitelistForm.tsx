@@ -23,11 +23,11 @@ const WhitelistForm: React.FC = () => {
     setMessage('');
 
     try {
-      const response = await fetch('https://integracion.ignavia.cl/webhook-test/suscripcion', {
+      const response = await fetch(process.env.WHITELIST_API_URL!, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Token isuw-uojf-xpon-cliv',
+          'Authorization': process.env.WHITELIST_API_TOKEN!,
         },
         body: JSON.stringify({ email: email }),
       });
