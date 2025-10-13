@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { TwitterIcon, InstagramIcon, FacebookIcon } from './icons/SocialIcons';
+import { TwitterIcon, InstagramIcon, FacebookIcon, EmailIcon } from './icons/SocialIcons';
 import { useLanguage } from '../context/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -8,7 +7,7 @@ const Footer: React.FC = () => {
   const { footer } = translations;
 
   return (
-    <footer id="contact" className="bg-brand-bg-dark text-white border-t-4 border-brand-primary">
+    <footer className="bg-brand-bg-dark text-white border-t-4 border-brand-primary">
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="mb-6 md:mb-0">
@@ -16,13 +15,16 @@ const Footer: React.FC = () => {
             <p className="text-brand-text-dark">{footer.tagline}</p>
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300">
+            <a href="mailto:contacto@ignavia.cl" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300" aria-label="Email Contact">
+              <EmailIcon />
+            </a>
+            <a href="#" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300" aria-label="Instagram Profile">
               <InstagramIcon />
             </a>
-            <a href="#" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300">
+            <a href="#" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300" aria-label="Twitter Profile">
               <TwitterIcon />
             </a>
-            <a href="#" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300">
+            <a href="#" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300" aria-label="Facebook Profile">
               <FacebookIcon />
             </a>
           </div>

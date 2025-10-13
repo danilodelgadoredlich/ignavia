@@ -1,5 +1,3 @@
-// FIX: Add a triple-slash directive to include Vite client types for `import.meta.env`.
-/// <reference types="vite/client" />
 import React, { useState, FormEvent } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 

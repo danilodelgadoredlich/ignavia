@@ -1,3 +1,4 @@
+
 export const translations = {
   en: {
     header: {
@@ -92,6 +93,21 @@ export const translations = {
         loading: 'Signing Up...',
         button: 'Get Access Now',
       },
+    },
+    contact: {
+      title: 'Get in Touch',
+      description: 'Have questions, feedback, or just want to say hello? We\'d love to hear from you. Drop us a line below.',
+      form: {
+        name: 'Your Name',
+        email: 'Your Email',
+        phone: 'Phone Number (Optional)',
+        message: 'Your Message',
+        button: 'Send Message',
+        loading: 'Sending...',
+        success: 'Message sent successfully! We\'ll get back to you soon.',
+        error: 'An error occurred. Please try again.',
+        errorValidation: 'Please fill out all required fields correctly.'
+      }
     },
     footer: {
       tagline: 'Reclaim Your Inbox.',
@@ -190,6 +206,21 @@ export const translations = {
         loading: 'Registrando...',
         button: 'Obtener Acceso Ahora',
       },
+    },
+    contact: {
+      title: 'Ponte en Contacto',
+      description: '¿Tienes preguntas, comentarios o simplemente quieres saludar? Nos encantaría saber de ti. Escríbenos a continuación.',
+      form: {
+        name: 'Tu Nombre',
+        email: 'Tu Correo Electrónico',
+        phone: 'Número de Teléfono (Opcional)',
+        message: 'Tu Mensaje',
+        button: 'Enviar Mensaje',
+        loading: 'Enviando...',
+        success: '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.',
+        error: 'Ocurrió un error. Por favor, inténtalo de nuevo.',
+        errorValidation: 'Por favor, completa correctamente todos los campos obligatorios.'
+      }
     },
     footer: {
       tagline: 'Recupera tu Bandeja de Entrada.',
