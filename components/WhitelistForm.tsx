@@ -3,6 +3,11 @@ import { useLanguage } from '../context/LanguageContext';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
+interface ApiResponse {
+  value: string;
+  Result: string;
+}
+
 const WhitelistForm: React.FC = () => {
   const { translations } = useLanguage();
   const { whitelist } = translations;
@@ -15,7 +20,7 @@ const WhitelistForm: React.FC = () => {
     e.preventDefault();
     if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
         setStatus('error');
-        setMessage(whitelist.form.error);
+        setMessage(`<p>${whitelist.form.error}</p>`);
         return;
     }
     
@@ -32,18 +37,28 @@ const WhitelistForm: React.FC = () => {
         body: JSON.stringify({ email: email }),
       });
 
+      const data: ApiResponse = await response.json();
+
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        // Use the API's message if available, otherwise fall back to a generic one
+        setMessage(data.Result || `<p>${whitelist.form.errorApi}</p>`);
+        setStatus('error');
+        return;
       }
       
-      setStatus('success');
-      setMessage(whitelist.form.success);
-      setEmail('');
+      if (data.value === "0") {
+        setStatus('success');
+        setMessage(data.Result);
+        setEmail('');
+      } else {
+        setStatus('error');
+        setMessage(data.Result);
+      }
 
     } catch (error) {
       console.error('Submission error:', error);
       setStatus('error');
-      setMessage(whitelist.form.errorApi);
+      setMessage(`<p>${whitelist.form.errorApi}</p>`);
     }
   };
 
@@ -76,9 +91,10 @@ const WhitelistForm: React.FC = () => {
               </button>
             </div>
              {message && (
-                <p className={`mt-4 text-sm ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}>
-                    {message}
-                </p>
+                <div 
+                    className={`mt-4 text-sm ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}
+                    dangerouslySetInnerHTML={{ __html: message }}
+                 />
             )}
           </form>
         </div>
