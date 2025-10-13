@@ -23,11 +23,11 @@ const WhitelistForm: React.FC = () => {
     setMessage('');
 
     try {
-      const response = await fetch(process.env.WHITELIST_API_URL!, {
+      const response = await fetch(process.env.WHITELIST_API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': process.env.WHITELIST_API_TOKEN!,
+          'Authorization': process.env.WHITELIST_API_TOKEN,
         },
         body: JSON.stringify({ email: email }),
       });
