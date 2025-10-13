@@ -23,25 +23,22 @@ const WhitelistForm: React.FC = () => {
     setMessage('');
 
     try {
-      const response = await fetch(process.env.WHITELIST_API_URL, {
+      const response = await fetch(process.env.WHITELIST_API_URL!, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': process.env.WHITELIST_API_TOKEN,
+          'Authorization': process.env.WHITELIST_API_TOKEN!,
         },
         body: JSON.stringify({ email: email }),
       });
 
-      const data = await response.json();
-
-      if (response.ok && data.value === '0') {
-        setStatus('success');
-        setMessage(data.Result);
-        setEmail('');
-      } else {
-        setStatus('error');
-        setMessage(data.Result || whitelist.form.errorApi);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+      
+      setStatus('success');
+      setMessage(whitelist.form.success);
+      setEmail('');
 
     } catch (error) {
       console.error('Submission error:', error);
@@ -79,9 +76,9 @@ const WhitelistForm: React.FC = () => {
               </button>
             </div>
              {message && (
-                <div className={`mt-4 text-sm ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}
-                    dangerouslySetInnerHTML={{ __html: message }} 
-                />
+                <p className={`mt-4 text-sm ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+                    {message}
+                </p>
             )}
           </form>
         </div>
