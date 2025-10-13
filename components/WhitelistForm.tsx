@@ -1,11 +1,13 @@
+// FIX: Add a triple-slash directive to include Vite client types for `import.meta.env`.
+/// <reference types="vite/client" />
 import React, { useState, FormEvent } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
 interface ApiResponse {
-  value: string;
-  Result: string;
+  value: string | number;
+  result: string;
 }
 
 const WhitelistForm: React.FC = () => {
@@ -38,17 +40,16 @@ const WhitelistForm: React.FC = () => {
       });
 
       const data: ApiResponse = await response.json();
-
-      // Even with a 4xx/5xx error, the API might send a JSON body.
-      // We prioritize the business logic value ("0") over the HTTP status.
-      if (data && data.value === "0") {
+      
+      // We prioritize the business logic value ("0" or 0) over the HTTP status.
+      if (data && String(data.value) === "0") {
         setStatus('success');
-        setMessage(data.Result);
+        setMessage(data.result);
         setEmail('');
       } else {
         // Handle all other cases as errors, using the API's message.
         setStatus('error');
-        setMessage(data.Result || `<p>${whitelist.form.errorApi}</p>`);
+        setMessage(data.result || `<p>${whitelist.form.errorApi}</p>`);
       }
 
     } catch (error) {
