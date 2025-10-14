@@ -84,7 +84,7 @@ export const translations = {
     },
     whitelist: {
       title: 'Sign Up Now',
-      description: 'Sign up for access to Ignavia and experience the future of email. As a bonus, you\'ll get <b>5 free message summaries</b> instantly!',
+      description: 'Sign up for access to Ignavia and experience the future of email. As a bonus, you\'ll get <b>10 free message summaries</b> instantly!',
       form: {
         placeholder: 'Enter your email address',
         error: 'Please enter a valid email address.',
@@ -197,7 +197,7 @@ export const translations = {
     },
     whitelist: {
       title: 'Regístrate Ahora',
-      description: 'Regístrate para obtener acceso a Ignavia y experimenta el futuro del correo electrónico. ¡y obtén <b>5 resúmenes de mensajes gratis</b> ahora, incluidos resúmenes con adjuntos!',
+      description: 'Regístrate para obtener acceso a Ignavia y experimenta el futuro del correo electrónico. ¡y obtén <b>10 resúmenes de mensajes gratis</b> ahora, incluidos resúmenes con adjuntos!',
       form: {
         placeholder: 'Ingresa tu dirección de correo electrónico',
         error: 'Por favor, ingresa una dirección de correo electrónico válida.',
