@@ -143,7 +143,7 @@ export const translations = {
         },
         attachments: {
           title: 'Análisis de Adjuntos',
-          description: 'Ignavia no solo lee correos. También analiza archivos adjuntos como PDFs y documentos para incluir sus puntos clave en el resumen.',
+          description: 'Puedes analizar imagenes, pdf, ppt, txt, xls y seguiremos aumentando los tipos de archivos.',
         },
       },
     },
