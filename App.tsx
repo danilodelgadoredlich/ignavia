@@ -1,12 +1,12 @@
 
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
 import MockupSection from './components/MockupSection';
-// FIX: Import the WhitelistForm component so it can be rendered in the application.
 import WhitelistForm from './components/WhitelistForm';
 import Footer from './components/Footer';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
@@ -159,19 +159,53 @@ const ContactSection: React.FC = () => {
   );
 };
 
+const MainContent: React.FC = () => (
+  <>
+    <HeroSection />
+    <FeaturesSection />
+    <MockupSection />
+    <WhitelistForm />
+    <ContactSection />
+  </>
+);
+
 const App: React.FC = () => {
+  const [page, setPage] = useState(window.location.hash === '#privacy' ? 'privacy' : 'main');
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#privacy') {
+        setPage('privacy');
+        window.scrollTo(0, 0);
+      } else {
+        setPage('main');
+        // Allow default anchor link behavior on the main page
+        if (window.location.hash) {
+            const id = window.location.hash.substring(1);
+            const element = document.getElementById(id);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+      }
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    // Initial check
+    handleHashChange();
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   return (
     <LanguageProvider>
       <div className="bg-brand-bg-dark min-h-screen font-sans text-brand-text-light">
         <div className="relative overflow-hidden">
           <Header />
           <main>
-            <HeroSection />
-            <FeaturesSection />
-            <MockupSection />
-            {/* FIX: Render the WhitelistForm component which was previously unused. */}
-            <WhitelistForm />
-            <ContactSection />
+            {page === 'privacy' ? <PrivacyPolicy /> : <MainContent />}
           </main>
           <Footer />
         </div>

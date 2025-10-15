@@ -6,6 +6,7 @@ export const translations = {
       demo: 'Demo',
       contact: 'Contact',
       language: 'Español',
+      privacyPolicy: 'Privacy Policy',
     },
     hero: {
       title: 'Reclaim Your Inbox.',
@@ -111,7 +112,63 @@ export const translations = {
     },
     footer: {
       tagline: 'Reclaim Your Inbox.',
+      privacyPolicy: 'Privacy Policy',
     },
+    privacyPolicyPage: {
+      backToHome: 'Back to Home',
+      title: 'Privacy Policy',
+      lastUpdated: 'Last Updated',
+      lastUpdatedDate: '2025-10-15',
+      controller: {
+        title: 'Data Controller:',
+        line1: 'https://Ignavia.cl',
+        link: 'https://Ignavia.cl',
+        line2: 'Contact Email',
+        email: 'contacto@ignavia.cl',
+      },
+      section1: {
+        title: '1. Information We Collect',
+        subtitle: "User's email address:",
+        content: 'We only collect the email address provided by the user when registering on our website or using our services. This information is necessary for account creation and the provision of our services.',
+      },
+      section2: {
+        title: '2. Use of Information',
+        intro: "We use the user's email address to:",
+        point1: 'Create and manage their account on our website.',
+        point2: 'Send notifications related to the use of our services.',
+        point3: 'Provide user support and assistance.',
+      },
+      section3: {
+        title: '3. Email Processing',
+        subtitle1: 'Summarization and destruction:',
+        content1: 'Emails that users upload to our system are processed to generate summaries using artificial intelligence. Once processed, these emails are automatically deleted and are not stored on our servers.',
+        subtitle2: 'Attachments:',
+        content2: 'We do not store or process attachments that users may include in their emails. These files are discarded immediately after being processed.',
+        subtitle3: 'Express consent:',
+        content3: 'If the user wishes for their emails to be stored for specific purposes, they must provide their express consent. In such cases, the information will be stored in accordance with the purposes for which consent was given.',
+      },
+      section4: {
+        title: '4. Information Protection',
+        content: 'We implement appropriate technical and organizational security measures to protect the user\'s personal information against unauthorized access, disclosure, alteration, or destruction.',
+      },
+      section5: {
+        title: '5. User Rights',
+        intro: 'The user has the right to:',
+        point1: 'Access: Request information about the personal data we hold about them.',
+        point2: 'Rectify: Correct inaccurate or incomplete personal data.',
+        point3: 'Delete: Request the deletion of their personal data, subject to legal limitations.',
+        point4: 'Revoke consent: Withdraw their consent at any time, without affecting the lawfulness of prior processing.',
+        outro: 'To exercise these rights, the user can contact us via the email address contacto@ignavia.cl.',
+      },
+      section6: {
+        title: '6. Changes to this policy',
+        content: 'We reserve the right to update this Privacy Policy at any time. Modifications will be posted on this page and will take effect immediately upon their publication.',
+      },
+      section7: {
+        title: '7. Applicable Law',
+        content: 'This Privacy Policy is governed by the laws of the Republic of Chile, in particular by Law No. 19,496 on the Protection of Consumer Rights and Law No. 19,628 on the Protection of Private Life.',
+      },
+    }
   },
   es: {
     header: {
@@ -119,6 +176,7 @@ export const translations = {
       demo: 'Demostración',
       contact: 'Contacto',
       language: 'English',
+      privacyPolicy: 'Política de Privacidad',
     },
     hero: {
       title: 'Recupera tu Bandeja de Entrada.',
@@ -224,6 +282,62 @@ export const translations = {
     },
     footer: {
       tagline: 'Recupera tu Bandeja de Entrada.',
+      privacyPolicy: 'Política de Privacidad',
     },
+    privacyPolicyPage: {
+      backToHome: 'Volver al Inicio',
+      title: 'Política de Privacidad',
+      lastUpdated: 'Fecha de última actualización',
+      lastUpdatedDate: '15-10-2025',
+      controller: {
+        title: 'Responsable del tratamiento de datos personales:',
+        line1: 'https://Ignavia.cl',
+        link: 'https://Ignavia.cl',
+        line2: 'Correo electrónico de contacto',
+        email: 'contacto@ignavia.cl',
+      },
+      section1: {
+        title: '1. Información que recopilamos',
+        subtitle: 'Correo electrónico del usuario:',
+        content: 'Recopilamos únicamente la dirección de correo electrónico proporcionada por el usuario al registrarse en nuestro sitio web o al utilizar nuestros servicios. Esta información es necesaria para la creación de una cuenta y para la prestación de nuestros servicios.',
+      },
+      section2: {
+        title: '2. Uso de la información',
+        intro: 'Utilizamos la dirección de correo electrónico del usuario para:',
+        point1: 'Crear y gestionar su cuenta en nuestro sitio web.',
+        point2: 'Enviar notificaciones relacionadas con el uso de nuestros servicios.',
+        point3: 'Proporcionar soporte y asistencia al usuario.',
+      },
+      section3: {
+        title: '3. Procesamiento de correos electrónicos',
+        subtitle1: 'Resumido y destrucción:',
+        content1: 'Los correos electrónicos que los usuarios cargan en nuestro sistema son procesados para generar resúmenes mediante inteligencia artificial. Una vez procesados, estos correos electrónicos son eliminados de forma automática y no se almacenan en nuestros servidores.',
+        subtitle2: 'Adjuntos:',
+        content2: 'No almacenamos ni procesamos los archivos adjuntos que los usuarios puedan incluir en los correos electrónicos. Estos archivos son descartados inmediatamente después de ser procesados.',
+        subtitle3: 'Consentimiento expreso:',
+        content3: 'En caso de que el usuario desee que sus correos electrónicos sean almacenados para fines específicos, deberá otorgar su consentimiento expreso. En tal caso, la información será almacenada de acuerdo con las finalidades para las cuales se otorgó el consentimiento.',
+      },
+      section4: {
+        title: '4. Protección de la información',
+        content: 'Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger la información personal del usuario contra acceso no autorizado, divulgación, alteración o destrucción.',
+      },
+      section5: {
+        title: '5. Derechos del usuario',
+        intro: 'El usuario tiene derecho a:',
+        point1: 'Acceder: Solicitar información sobre los datos personales que tenemos sobre él.',
+        point2: 'Rectificar: Corregir datos personales inexactos o incompletos.',
+        point3: 'Eliminar: Solicitar la eliminación de sus datos personales, sujeto a las limitaciones legales.',
+        point4: 'Revocar el consentimiento: Retirar su consentimiento en cualquier momento, sin que ello afecte la legalidad del tratamiento previo.',
+        outro: 'Para ejercer estos derechos, el usuario puede ponerse en contacto con nosotros a través del correo electrónico contacto@ignavia.cl.',
+      },
+      section6: {
+        title: '6. Modificaciones a esta política',
+        content: 'Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Las modificaciones serán publicadas en esta página y entrarán en vigor inmediatamente después de su publicación.',
+      },
+      section7: {
+        title: '7. Legislación aplicable',
+        content: 'Esta Política de Privacidad se rige por las leyes de la República de Chile, en particular por la Ley N° 19.496 sobre Protección de los Derechos de los Consumidores y la Ley N° 19.628 sobre Protección de la Vida Privada.',
+      },
+    }
   },
 };

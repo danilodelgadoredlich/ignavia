@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { TwitterIcon, InstagramIcon, FacebookIcon, EmailIcon } from './icons/SocialIcons';
 import { useLanguage } from '../context/LanguageContext';
@@ -29,8 +30,9 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className="mt-8 border-t border-white/10 pt-6 text-center text-gray-500">
+        <div className="mt-8 border-t border-white/10 pt-6 text-center text-gray-500 flex flex-col sm:flex-row justify-center items-center gap-4">
           <p>&copy; {new Date().getFullYear()} Ignavia. All rights reserved.</p>
+          <a href="#privacy" className="text-gray-400 hover:text-brand-primary transition-colors duration-300">{footer.privacyPolicy}</a>
         </div>
       </div>
     </footer>

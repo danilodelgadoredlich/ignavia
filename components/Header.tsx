@@ -4,14 +4,16 @@ import { useLanguage } from '../context/LanguageContext';
 
 const Logo = () => (
   <div className="flex items-center space-x-3">
-    <img
-      src="https://placehold.co/40x40/6366F1/FFFFFF/png?text=I"
-      alt="Ignavia Logo"
-      width="40"
-      height="40"
-      className="rounded-lg"
-    />
-    <span className="text-2xl font-bold text-brand-text-light">Ignavia</span>
+    <a href="#" className="flex items-center space-x-3">
+        <img
+        src="https://placehold.co/40x40/6366F1/FFFFFF/png?text=I"
+        alt="Ignavia Logo"
+        width="40"
+        height="40"
+        className="rounded-lg"
+        />
+        <span className="text-2xl font-bold text-brand-text-light">Ignavia</span>
+    </a>
   </div>
 );
 
@@ -34,6 +36,7 @@ const Header: React.FC = () => {
           <NavLink href="#features">{header.features}</NavLink>
           <NavLink href="#demo">{header.demo}</NavLink>
           <NavLink href="#contact">{header.contact}</NavLink>
+          <NavLink href="#privacy">{header.privacyPolicy}</NavLink>
           <button
             onClick={toggleLanguage}
             className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold text-sm px-4 py-2 rounded-full hover:opacity-90 transition-opacity duration-300"
@@ -55,6 +58,7 @@ const Header: React.FC = () => {
             <NavLink href="#features">{header.features}</NavLink>
             <NavLink href="#demo">{header.demo}</NavLink>
             <NavLink href="#contact">{header.contact}</NavLink>
+            <NavLink href="#privacy">{header.privacyPolicy}</NavLink>
             <button
               onClick={toggleLanguage}
               className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold text-sm px-4 py-2 rounded-full hover:opacity-90 transition-opacity duration-300 mt-2"
