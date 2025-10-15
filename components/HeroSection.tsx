@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import HeroWhitelistForm from './HeroWhitelistForm';
 
 const HeroBackground = () => (
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden" aria-hidden="true">
@@ -113,6 +114,7 @@ const HeroSection: React.FC = () => {
             <p className="text-lg text-brand-text-dark max-w-xl mx-auto lg:mx-0">
               {hero.description}
             </p>
+            <HeroWhitelistForm />
           </div>
           <div className="lg:w-1/2 flex justify-center">
             <HeroAIIllustration />
