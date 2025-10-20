@@ -12,11 +12,11 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold">Ignavia</h3>
+            <h3 className="text-2xl font-bold">Ergia</h3>
             <p className="text-brand-text-dark">{footer.tagline}</p>
           </div>
           <div className="flex space-x-6">
-            <a href="mailto:contacto@ignavia.cl" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300" aria-label="Email Contact">
+            <a href="mailto:contacto@ergia.cl" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300" aria-label="Email Contact">
               <EmailIcon />
             </a>
             <a href="#" className="text-brand-text-dark hover:text-brand-primary transition-colors duration-300" aria-label="Instagram Profile">
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-white/10 pt-6 text-center text-gray-500 flex flex-col sm:flex-row justify-center items-center gap-4">
-          <p>&copy; {new Date().getFullYear()} Ignavia. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ergia. All rights reserved.</p>
           <a href="#privacy" className="text-gray-400 hover:text-brand-primary transition-colors duration-300">{footer.privacyPolicy}</a>
         </div>
       </div>

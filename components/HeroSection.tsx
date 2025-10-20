@@ -33,7 +33,7 @@ const HeroImage = () => (
     <div className="w-full">
         <img
             src="https://ignavia.cl/correo.png"
-            alt="Ignavia app in action, summarizing an email thread."
+            alt="Ergia app in action, summarizing an email thread."
             width={1200}
             height={800}
             className="w-full h-auto rounded-xl shadow-2xl border-2 border-white/10 transform transition-transform duration-500 ease-in-out hover:scale-105"

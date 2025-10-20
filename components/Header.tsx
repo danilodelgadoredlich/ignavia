@@ -6,13 +6,13 @@ const Logo = () => (
   <div className="flex items-center space-x-3">
     <a href="#" className="flex items-center space-x-3">
         <img
-        src="https://placehold.co/40x40/6366F1/FFFFFF/png?text=I"
-        alt="Ignavia Logo"
+        src="https://placehold.co/40x40/6366F1/FFFFFF/png?text=E"
+        alt="Ergia Logo"
         width="40"
         height="40"
         className="rounded-lg"
         />
-        <span className="text-2xl font-bold text-brand-text-light">Ignavia</span>
+        <span className="text-2xl font-bold text-brand-text-light">Ergia</span>
     </a>
   </div>
 );
