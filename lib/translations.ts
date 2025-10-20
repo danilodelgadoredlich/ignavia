@@ -11,11 +11,11 @@ export const translations = {
     hero: {
       title: 'Reclaim Your Inbox.',
       subtitle: 'AI-Powered Summaries',
-      description: 'Stop drowning in emails. Ignavia uses advanced AI to summarize your threads, giving you the gist in seconds so you can focus on what truly matters.',
+      description: 'Stop drowning in emails. ergia uses advanced AI to summarize your threads, giving you the gist in seconds so you can focus on what truly matters.',
     },
     features: {
       title: 'The Future of Email is Here',
-      description: 'Ignavia is more than an app; it\'s your personal email assistant designed for efficiency and clarity.',
+      description: 'ergia is more than an app; it\'s your personal email assistant designed for efficiency and clarity.',
       cards: {
         ai: {
           title: 'AI-Powered Summaries',
@@ -31,12 +31,12 @@ export const translations = {
         },
         attachments: {
           title: 'Attachment Analysis',
-          description: 'Ignavia doesn\'t just read emails. It also analyzes attachments like PDFs and documents to include their key points in the summary.',
+          description: 'ergia doesn\'t just read emails. It also analyzes attachments like PDFs and documents to include their key points in the summary.',
         },
       },
     },
     mockup: {
-      title: 'See Ignavia in Action',
+      title: 'See ergia in Action',
       description: 'A clean, intuitive interface that puts summaries front and center.',
       items: {
         item1: {
@@ -85,7 +85,7 @@ export const translations = {
     },
     whitelist: {
       title: 'Sign Up Now',
-      description: 'Sign up for access to Ignavia and experience the future of email. As a bonus, you\'ll get <b>10 free message summaries</b> instantly!',
+      description: 'Sign up for access to ergia and experience the future of email. As a bonus, you\'ll get <b>10 free message summaries</b> instantly!',
       form: {
         placeholder: 'Enter your email address',
         error: 'Please enter a valid email address.',
@@ -121,10 +121,10 @@ export const translations = {
       lastUpdatedDate: '2025-10-15',
       controller: {
         title: 'Data Controller:',
-        line1: 'https://Ignavia.cl',
-        link: 'https://Ignavia.cl',
+        line1: 'https://ergia.cl',
+        link: 'https://ergia.cl',
         line2: 'Contact Email',
-        email: 'contacto@ignavia.cl',
+        email: 'contacto@ergia.cl',
       },
       section1: {
         title: '1. Information We Collect',
@@ -158,7 +158,7 @@ export const translations = {
         point2: 'Rectify: Correct inaccurate or incomplete personal data.',
         point3: 'Delete: Request the deletion of their personal data, subject to legal limitations.',
         point4: 'Revoke consent: Withdraw their consent at any time, without affecting the lawfulness of prior processing.',
-        outro: 'To exercise these rights, the user can contact us via the email address contacto@ignavia.cl.',
+        outro: 'To exercise these rights, the user can contact us via the email address contacto@ergia.cl.',
       },
       section6: {
         title: '6. Changes to this policy',
@@ -181,11 +181,11 @@ export const translations = {
     hero: {
       title: 'Recupera tu Bandeja de Entrada.',
       subtitle: 'Resúmenes con IA',
-      description: 'Deja de ahogarte en correos. Ignavia usa IA avanzada para resumir tus hilos, dándote lo esencial en segundos para que puedas enfocarte en lo que realmente importa.',
+      description: 'Deja de ahogarte en correos. ergia usa IA avanzada para resumir tus hilos, dándote lo esencial en segundos para que puedas enfocarte en lo que realmente importa.',
     },
     features: {
       title: 'El Futuro del Email está Aquí',
-      description: 'Ignavia es más que una app; es tu asistente personal de email diseñado para la eficiencia y claridad.',
+      description: 'ergia es más que una app; es tu asistente personal de email diseñado para la eficiencia y claridad.',
       cards: {
         ai: {
           title: 'Resúmenes con IA',
@@ -206,7 +206,7 @@ export const translations = {
       },
     },
     mockup: {
-      title: 'Mira a Ignavia en Acción',
+      title: 'Mira a ergia en Acción',
       description: 'Nuestra interfaz convierte cadenas de emails y newsletters en resúmenes clave, eliminando lo irrelevante.',
       items: {
         item1: {
@@ -255,7 +255,7 @@ export const translations = {
     },
     whitelist: {
       title: 'Regístrate Ahora',
-      description: 'Regístrate para obtener acceso a Ignavia y experimenta el futuro del correo electrónico. ¡y obtén <b>10 resúmenes de mensajes gratis</b> ahora, incluidos resúmenes con adjuntos!',
+      description: 'Regístrate para obtener acceso a ergia y experimenta el futuro del correo electrónico. ¡y obtén <b>10 resúmenes de mensajes gratis</b> ahora, incluidos resúmenes con adjuntos!',
       form: {
         placeholder: 'Ingresa tu dirección de correo electrónico',
         error: 'Por favor, ingresa una dirección de correo electrónico válida.',
@@ -291,10 +291,10 @@ export const translations = {
       lastUpdatedDate: '15-10-2025',
       controller: {
         title: 'Responsable del tratamiento de datos personales:',
-        line1: 'https://Ignavia.cl',
-        link: 'https://Ignavia.cl',
+        line1: 'https://ergia.cl',
+        link: 'https://ergia.cl',
         line2: 'Correo electrónico de contacto',
-        email: 'contacto@ignavia.cl',
+        email: 'contacto@ergia.cl',
       },
       section1: {
         title: '1. Información que recopilamos',
@@ -328,7 +328,7 @@ export const translations = {
         point2: 'Rectificar: Corregir datos personales inexactos o incompletos.',
         point3: 'Eliminar: Solicitar la eliminación de sus datos personales, sujeto a las limitaciones legales.',
         point4: 'Revocar el consentimiento: Retirar su consentimiento en cualquier momento, sin que ello afecte la legalidad del tratamiento previo.',
-        outro: 'Para ejercer estos derechos, el usuario puede ponerse en contacto con nosotros a través del correo electrónico contacto@ignavia.cl.',
+        outro: 'Para ejercer estos derechos, el usuario puede ponerse en contacto con nosotros a través del correo electrónico contacto@ergia.cl.',
       },
       section6: {
         title: '6. Modificaciones a esta política',
